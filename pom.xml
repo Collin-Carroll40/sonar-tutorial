@@ -18,8 +18,8 @@
         <!-- Tells Sonar this is a Java project -->
         <sonar.language>java</sonar.language>
         <!-- SonarCloud connection: replace both values with the ones SonarCloud shows you -->
-        <sonar.organization>YOUR_ORG_KEY</sonar.organization>
-        <sonar.projectKey>YOUR_PROJECT_KEY</sonar.projectKey>
+        <sonar.organization>collin-carroll40</sonar.organization>
+        <sonar.projectKey>Collin-Carroll40_sonar-tutorial</sonar.projectKey>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <!-- Tells Sonar where to find the bytecode -->
         <sonar.java.libraries>target/classes</sonar.java.libraries>
