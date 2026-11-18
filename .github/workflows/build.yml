@@ -34,7 +34,7 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
       # Secretless analysis: exchanges the GitHub OIDC token for a short-lived SONAR_TOKEN
-      - uses: SonarSource/sonarqube-auth-action@v1
+      - uses: SonarSource/sonarqube-auth-action@b372e2c2930aadfcc4f4399446da1e12772709ad # v1.2
         id: auth
       - name: Build, test and analyze
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
