@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 class CustomFileReader {
     /**
-     * The path of the dictionary file to be read
+     * The scanner that will read the dictionary
      */
     private final String path;
 
@@ -36,12 +36,6 @@ class CustomFileReader {
         count = 0;
     }
 
-    /**
-     * Creates a new Scanner for the dictionary file using UTF-8 encoding.
-     *
-     * @return a Scanner reading the dictionary file
-     * @throws FileNotFoundException if the file does not exist
-     */
     private Scanner createScanner() throws FileNotFoundException {
         return new Scanner(new InputStreamReader(
                 new FileInputStream(path), StandardCharsets.UTF_8));
@@ -51,7 +45,6 @@ class CustomFileReader {
      * This will find how many words are in the text file provided
      *
      * @return how many words in the file
-     * @throws FileNotFoundException if the file does not exist
      */
     int howManyWordsInFile() throws FileNotFoundException {
         int words = 0;
@@ -70,7 +63,6 @@ class CustomFileReader {
      *
      * @param index which number word should be taken back
      * @return correct word
-     * @throws FileNotFoundException if the file does not exist
      */
     String returnThatWord(final int index) throws FileNotFoundException {
         String returnWord = "";
@@ -84,10 +76,9 @@ class CustomFileReader {
 
     /**
      * This will search for a word that contains the same letter as the
-     * one provided in the argument and add that word to the sentence
+     * one provided in the argument and return that word
      *
-     * @param letter the character sequence we are looking for in the word
-     * @throws FileNotFoundException if the file does not exist
+     * @param letter eventually will be the character we are looking for in the word
      */
     void findNewWord(final CharSequence letter) throws FileNotFoundException {
         try (Scanner s = createScanner()) {
@@ -132,7 +123,7 @@ class CustomFileReader {
     /**
      * This is another private getter
      *
-     * @return the path of the dictionary file
+     * @return the number of words in the dictionary
      */
     private String getPath() {
         return path;

@@ -9,7 +9,6 @@ import java.util.Locale;
  * a few extra getters, and the use of a String instead of a List
  * for our sentence we create.
  */
-// A console program that prints to System.out
 @SuppressWarnings({"squid:S106", "squid:S1166"})
 class Main {
     /**
